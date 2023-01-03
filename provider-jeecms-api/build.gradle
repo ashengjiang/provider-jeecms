@@ -1,0 +1,6 @@
+description = 'provider-jeecms-api'
+
+dependencies {
+    api(project(':provider-jeecms-common'))
+}
+

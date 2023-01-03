@@ -1,0 +1,78 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.idata.provider",
+    "module": "provider-jeecms-api",
+    "version": "2022.12.29",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.idata.provider",
+          "module": "provider-jeecms-common",
+          "version": {
+            "requires": "2022.12.29"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "provider-jeecms-api-2022.12.29.jar",
+          "url": "provider-jeecms-api-2022.12.29.jar",
+          "size": 1673,
+          "sha512": "42f6c672f7da553ee9fd917dd2c3b119a658e5b185dd9b443fd2276d0d8ba57367a6aba972c933734d6e6106691fe476378e8711a4e2f25ae4ae9adfc6553f5d",
+          "sha256": "0c7dc65b823aa63f1960c363e3b4c2d4c7559ddf84b859e1b567941c8442c6b0",
+          "sha1": "03735bdb3321f9b61cf7116d57cfd355762a4aac",
+          "md5": "6481c3c62fe7454698d8966eee3373f5"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.idata.provider",
+          "module": "provider-jeecms-common",
+          "version": {
+            "requires": "2022.12.29"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "provider-jeecms-api-2022.12.29.jar",
+          "url": "provider-jeecms-api-2022.12.29.jar",
+          "size": 1673,
+          "sha512": "42f6c672f7da553ee9fd917dd2c3b119a658e5b185dd9b443fd2276d0d8ba57367a6aba972c933734d6e6106691fe476378e8711a4e2f25ae4ae9adfc6553f5d",
+          "sha256": "0c7dc65b823aa63f1960c363e3b4c2d4c7559ddf84b859e1b567941c8442c6b0",
+          "sha1": "03735bdb3321f9b61cf7116d57cfd355762a4aac",
+          "md5": "6481c3c62fe7454698d8966eee3373f5"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+description = 'provider-jeecms-common'
+
+dependencies {
+    api('org.springframework.cloud:spring-cloud-starter-openfeign')
+    api("com.idata.common:common-doc")
+}

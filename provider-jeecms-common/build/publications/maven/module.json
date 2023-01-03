@@ -1,0 +1,92 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.idata.provider",
+    "module": "provider-jeecms-common",
+    "version": "2022.12.29",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.cloud",
+          "module": "spring-cloud-starter-openfeign",
+          "version": {
+            "requires": "3.1.4"
+          }
+        },
+        {
+          "group": "com.idata.common",
+          "module": "common-doc",
+          "version": {
+            "requires": "2.7.5"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "provider-jeecms-common-2022.12.29.jar",
+          "url": "provider-jeecms-common-2022.12.29.jar",
+          "size": 17276,
+          "sha512": "595ee21af2b45e0d8631fa2211cc9d88d5adf1d83c7a9c026facecb843d79ed448e0820457ed84c4142776364490e0099e1fef4d767b0c1c0f5abc8cfa3c2339",
+          "sha256": "1edb74fa52d8455c990861703e16fe6e9e1dda628c70d7d56198a24c0ce57d01",
+          "sha1": "741b927bc173a114e6e49d0fdff3273fc83c887e",
+          "md5": "84547370a40fa65b75fcdffd8b607597"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.cloud",
+          "module": "spring-cloud-starter-openfeign",
+          "version": {
+            "requires": "3.1.4"
+          }
+        },
+        {
+          "group": "com.idata.common",
+          "module": "common-doc",
+          "version": {
+            "requires": "2.7.5"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "provider-jeecms-common-2022.12.29.jar",
+          "url": "provider-jeecms-common-2022.12.29.jar",
+          "size": 17276,
+          "sha512": "595ee21af2b45e0d8631fa2211cc9d88d5adf1d83c7a9c026facecb843d79ed448e0820457ed84c4142776364490e0099e1fef4d767b0c1c0f5abc8cfa3c2339",
+          "sha256": "1edb74fa52d8455c990861703e16fe6e9e1dda628c70d7d56198a24c0ce57d01",
+          "sha1": "741b927bc173a114e6e49d0fdff3273fc83c887e",
+          "md5": "84547370a40fa65b75fcdffd8b607597"
+        }
+      ]
+    }
+  ]
+}
