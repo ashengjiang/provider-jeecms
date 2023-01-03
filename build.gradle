@@ -1,0 +1,68 @@
+plugins {
+    id "org.springframework.boot" version "${springBootVersion}"
+}
+
+subprojects {
+    apply plugin: 'java-library'
+    apply plugin: 'maven-publish'
+    apply plugin: "io.spring.dependency-management"
+
+    group = 'com.idata.provider'
+    version = '2022.12.29'
+
+    repositories {
+        mavenLocal()
+        maven { url "https://nexus.pharmbrain.com/repository/maven-public/" }
+        maven { url "https://maven.aliyun.com/repository/public" }
+        mavenCentral()
+    }
+
+    dependencies {
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom("com.idata:common:${springBootVersion}")
+        }
+    }
+
+    publishing {
+        repositories {
+            maven {
+                url = "https://nexus.pharmbrain.com/repository/maven-releases/"
+                //认证用户和密码
+                credentials {
+                    username System.getenv("maven_username")
+                    password System.getenv("maven_password")
+                }
+            }
+
+        }
+        publications {
+            maven(MavenPublication) {
+                from components.java
+                versionMapping {
+                    usage('java-api') {
+                        fromResolutionOf('runtimeClasspath')
+                    }
+                    usage('java-runtime') {
+                        fromResolutionResult()
+                    }
+                }
+            }
+        }
+    }
+
+    sourceCompatibility = JavaVersion.VERSION_11
+
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << "-parameters"
+        options.encoding = 'UTF-8'
+    }
+
+    tasks.withType(Javadoc) {
+        options.encoding = 'UTF-8'
+    }
+}
